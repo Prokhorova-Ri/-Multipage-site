@@ -218,3 +218,44 @@
     max-width: 30em;
   }
 }
+
+.top {
+  &__slider-item{
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+  &__slider-img {
+    margin-left: -15%;
+    max-width: 44em;
+    height: 51em;
+    object-fit: cover;
+  }
+  &__slider-info {
+    max-width: 40em;
+    margin-left: 1.5em;
+
+  }
+  &__slider-title {
+    @extend %title-font;
+    color: $title;
+    font-size: 6.9em;
+    line-height: 1.2em;
+    padding-bottom: .2em;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 2em;
+      height: .02em;      
+      background-color: #979797;
+    }
+  }
+  &__slider-text {
+    padding-top: .2em;
+    max-width: 36em;
+    color: #5A5A5A;
+  }
+}
