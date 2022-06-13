@@ -9,7 +9,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 120px;
+    height: 7.5em;
   }
   &__btn {
     background-color: transparent;
@@ -17,65 +17,72 @@
     padding: 0;
     cursor: pointer;
   }
-}
-
 .logo {
   margin: 0 auto;
 }
+}
 
 .menu {
-  padding-left: 0.3rem;
-  padding-right: 3.75rem;
+  padding-left: 0.3em;
+  padding-right: 3.75em;
   &__list {
     display: flex;
   }
   &__list-item {
-    padding-left: 2.8rem;
-    padding-right: 2.18rem;
+    padding-left: 2.8em;
+    padding-right: 2.18em;
   }
   &__list-link {
     @extend %title-font;
     color: rgba(54, 56, 56, 0.9);
-    line-height: 22px;
+    line-height: 1.3em;
   }
 }
 
 .footer {
   &__content {
     background-color: #DFDFDF;
-    padding: 3.7rem 0 5rem;
+    padding: 3.7em 0 5em;
   }
   &__inner {
     display: flex;
     justify-content: space-between;
   }
-  &__info {
-  }
   &__info-title {
     color: $title;    
     @extend %title-font;
-    margin-bottom: .9rem;
-    line-height: 1.4rem;
+    margin-bottom: .9em;
+    line-height: 1.4em;
   }
   &__info-text {    
-    margin-bottom: 1rem;
+    margin-bottom: 1em;
   }
   &__info-email {
     display: inline-block;
     font-weight: 600;
     color: $title;
-    font-size: .9rem;
-    margin-bottom: 1.4rem;
-    padding-left: 1.9rem;
+    font-size: .9em;
+    margin-bottom: 1.4em;
+    padding-left: 1.9em;
+    position: relative;
+    &::before {
+      content: '';
+      background-image: url(../images/letter.svg);
+      position: absolute;
+      left: 0;
+      width: 1em;
+      height: .75em;
+      top: .5em;
+    }
   }
   &__form {
     display: flex;
   }
   &__form-input {
-    padding: .4rem .6rem .4rem 1.1rem;
+    padding: .4em .6em .4em 1.1em;
     background-color: transparent;
     border: 1px solid rgba($title, .7);
-    border-radius: 1.3rem;
+    border-radius: 1.3em;
     width: 100%;
     &::placeholder {
       font-family: 'Open Sans', sans-serif;
@@ -87,17 +94,127 @@
     background-color: $title;
     border: none;
     color: #fffff0;
-    border-radius: 1.3rem;
+    border-radius: 1.3em;
     font-weight: 600;
-    padding: .4rem .7rem;
-    min-width: 10rem;
+    padding: .4em .7em;
+    min-width: 10em;
     cursor: pointer;
-    margin-left: .6rem;
+    margin-left: .6em;
   }
+  &__social {
+    width: 7.9em;    
+    margin-right: auto;
+    margin-left: 7em;
+  } 
+  &__social-link {
+    padding-left: 1.7em;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      top: .1em;
+      left: 0;
+      width: 1em;   
+      height: 1em;   
+    }
+  }
+  &__social-link--facebook::before{
+    background-image: url(../images/facebook.svg)
+  }
+  &__social-link--instagram::before{
+    background-image: url(../images/instagram.svg);
+    width: .88em;
+    height: .92em;  
+  }
+  &__social-link--pinterest::before{
+    background-image: url(../images/pinterest.svg)
+  }
+  &__social-link--whatsapp::before{
+    background-image: url(../images/whatsapp.svg);
+    width: .88em;
+    height: .88em;
+  }
+  &__social-link--youtube::before{
+    background-image: url(../images/youtube.svg);
+    top: .15em;
+    width: 1.1em;
+    height: .75em;
+  }
+  &__social-item,
+  &__menu-item { 
+    margin-bottom: 1em;
+    font-weight: 600;
+    font-size: .8em;
+  }
+  &__social-link,
+  &__menu-link { 
+    color: #707070;
+  }
+  &__menu {
+    margin-right: 5.5em;
+    width: 7.8em;
+  }
+ 
   &__copyright {
     background-color: $title;
     color: #A1A1A1;
     text-align: center;
-    padding: 2.5rem 0 2.5rem;
+    padding: 2.5em 0 2.5rem;
+  }
+}
+.rightside-menu {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 43em;
+  background-color: #fff;
+  padding-top: 2.5em;
+  box-shadow: -.06em -1em 1.1em .1px;
+  transition: all .6s;
+  &.rightside-menu--close {
+    transform: translateX(500%);
+  }
+  &__close {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 3em;    
+    padding: 0;
+  }
+  &__content {
+   text-align: center;
+   max-width: 30em;
+   margin: 0 auto;
+  }
+  &__logo {
+    display: inline-block;
+    margin-right: 3em;
+  }
+  &__title {
+    @extend %title-font;
+    font-size: 2.2em;
+    line-height: 2.2em;
+    color: $title;
+    position: relative;
+    margin-bottom: .5em;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      height: 0.02em;
+      background-color: #979797;
+      max-width: 7em;
+    }
+  }
+  &__text {
+    margin-bottom: 4.7em;
+  }
+  &__images {
+    max-width: 30em;
   }
 }
