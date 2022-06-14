@@ -9,6 +9,10 @@ $(function () {
   $('.top__slider').slick({
     dots: true,
     arrows: false,
-    fade: true
+    fade: true,
+    pauseOnFocus: false,
+    pauseOnHover: false,
+    autoplay: true,
+    autoplaySpeed: 4000
   });
 })

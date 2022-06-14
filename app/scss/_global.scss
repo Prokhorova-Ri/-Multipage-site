@@ -5,7 +5,7 @@ html, body {
 body{
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
-  line-height: 27px;
+  line-height: 1.7em;
   color: $default;
   overflow-x: hidden;
   min-width: 20em;
@@ -26,7 +26,33 @@ body{
 }
 
 .container {
-  max-width: 1140px;
+  max-width: 71em;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 .9px;
+
+}
+
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    li{
+      margin: 0 1em;
+    }
+    button{
+      background-color: $title;
+      border: none;
+      width: .5em;
+      height: .5em;
+      border-radius: 50%;
+      padding: 0;      
+    }
+    li.slick-active{
+      button{
+       background-color: #FFEF35;
+      }
+    }
+}
+.slick-dots li button {
+  text-indent: -9999px;
 }
