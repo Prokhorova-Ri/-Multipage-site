@@ -6,6 +6,8 @@ const scss         = require('gulp-sass')(require('sass'));
 const autoprefixer = require('gulp-autoprefixer');
 const imagemin     = require('gulp-imagemin');
 const del          = require('del');
+const gulp         = require('gulp');
+const ghPages      = require('gulp-gh-pages');
 
 function browsersync() {
   browserSync.init({
@@ -76,6 +78,11 @@ function watching() {
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
   watch(['app/*.html']).on('change', browserSync.reload);
 }
+
+gulp.task('deploy', function() {
+  return gulp.src('./build/**/*')
+    .pipe(ghPages());
+});
 
 exports.styles      = styles;
 exports.images      = images;
