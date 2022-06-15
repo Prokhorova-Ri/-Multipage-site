@@ -5,10 +5,10 @@ html, body {
 body{
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
-  line-height: 1.7em;
+  line-height: 27px;
   color: $default;
   overflow-x: hidden;
-  min-width: 20em;
+  min-width: 320px;
 }
 
 .wrapper {
@@ -26,10 +26,15 @@ body{
 }
 
 .container {
-  max-width: 71em;
+  max-width: 1140px;
   margin: 0 auto;
-  padding: 0 .9px;
+  padding: 0 15px;
+}
 
+.container-fluid {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 10px;
 }
 
 .slick-dots {
@@ -37,13 +42,13 @@ body{
     justify-content: center;
     align-items: center;
     li{
-      margin: 0 1em;
+      margin: 0 15px;
     }
     button{
       background-color: $title;
       border: none;
-      width: .5em;
-      height: .5em;
+      width: 8px;
+      height: 8px;
       border-radius: 50%;
       padding: 0;      
     }
