@@ -4,12 +4,13 @@ $default: #5A5A5A;
 %title-font {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
+  color: #363838;
 }
 %line-decor {
   position: absolute;
   height: 1px;
   bottom: 0;    
-  background: #6D7278;
+  background: rgba(#363838, .7);
   left: 0;
   right: 0;
 }
