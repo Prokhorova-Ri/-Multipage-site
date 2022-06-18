@@ -7,8 +7,9 @@ $default: #5A5A5A;
   color: #363838;
 }
 %line-decor {
+  content: '';
   position: absolute;
-  height: 1px;
+  height: 2px;
   bottom: 0;    
   background: rgba(#363838, .7);
   left: 0;

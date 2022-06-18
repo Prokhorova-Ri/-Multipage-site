@@ -22,7 +22,7 @@ body{
 }
 
 .footer {
-  flex: 0 0 auto;
+  flex: 0 0 auto;  
 }
 
 .container {
@@ -60,4 +60,23 @@ body{
 }
 .slick-dots li button {
   text-indent: -9999px;
+}
+
+.info-email {
+  display: inline-block;
+  font-weight: 600;
+  color: $title;
+  font-size: 14px;
+  margin-bottom: 22px;
+  padding-left: 30px;
+  position: relative;
+  &::before {
+    content: '';
+    background-image: url(../images/letter.svg);
+    position: absolute;
+    left: 0;
+    width: 16px;
+    height: 12px;
+    top: 8px;
+  }
 }
