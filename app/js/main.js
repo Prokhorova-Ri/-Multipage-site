@@ -23,7 +23,11 @@ $(function () {
     arrows: false,
     autoplay: true,
   });
-  
+    
+  $('.article-slider__box').slick({
+    prevArrow: '<button type="button" class="article-slider__arrow article-slider__arrowLeft"><img src="images/arrow-slide-left.svg" alt="arrow left"></button>',
+    nextArrow: '<button type="button" class="article-slider__arrow article-slider__arrowRight"><img src="images/arrow-slide-right.svg" alt="arrow right"></button>'
+  });
 
   var mixer = mixitup('.gallery__inner', {
     load: {
