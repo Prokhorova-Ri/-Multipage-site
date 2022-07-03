@@ -22,7 +22,7 @@ function cleanDist() {
 }
 
 function images() {
-  return src('app/images/**/*')
+  return src('docs/images/**/*')
   .pipe(imagemin(
       [
         imagemin.gifsicle({interlaced: true}),
@@ -45,40 +45,40 @@ function scripts () {
     'node_modules/slick-carousel/slick/slick.js',
     'node_modules/mixitup/dist/mixitup.js',
     'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
-    'app/js/main.js'
+    'docs/js/main.js'
   ])
   .pipe(concat('main.min.js'))
   .pipe(uglify())
-  .pipe(dest('app/js'))
+  .pipe(dest('docs/js'))
   .pipe(browserSync.stream())
 }
 
 function styles() {
-  return src('app/scss/style.scss')
+  return src('docs/scss/style.scss')
     .pipe(scss({outputStyle: 'compressed'}))
     .pipe(concat('style.min.css'))
     .pipe(autoprefixer({
       overrideBrowserslist: ['last 10 version'],
       grid: true
     }))
-    .pipe(dest('app/css'))
+    .pipe(dest('docs/css'))
     .pipe(browserSync.stream())
 }
 
 function build() {
   return src([
-    'app/css/style.min.css',
-    'app/fonts/**/*',
-    'app/js/main.min.js',
-    'app/*.html'
-  ], {base: 'app'})
+    'docs/css/style.min.css',
+    'docs/fonts/**/*',
+    'docs/js/main.min.js',
+    'docs/*.html'
+  ], {base: 'docs'})
   .pipe(dest('dist'))
 }
 
 function watching() {
-  watch(['app/scss/**/*.scss'], styles);
-  watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
-  watch(['app/*.html']).on('change', browserSync.reload);
+  watch(['docs/scss/**/*.scss'], styles);
+  watch(['docs/js/**/*.js', '!app/js/main.min.js'], scripts);
+  watch(['docs/*.html']).on('change', browserSync.reload);
 }
 
 gulp.task('deploy', function() {
