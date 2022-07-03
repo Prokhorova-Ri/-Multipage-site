@@ -12,7 +12,7 @@ const ghPages      = require('gulp-gh-pages');
 function browsersync() {
   browserSync.init({
     server: {
-        baseDir: "app/"
+        baseDir: "docs/"
     }
   });
 }
