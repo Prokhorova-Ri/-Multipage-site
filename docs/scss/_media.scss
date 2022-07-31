@@ -1,27 +1,356 @@
+@media (max-width: 1366px) {
+  .collection {
+    grid-template-columns: repeat(3, 1fr);
+    &__images {
+      width: 100%;
+    }
+  }
+  .top {
+    &__slider-img {
+    height: 700px;
+    padding-left: 100px;
+  }
+  &__slider-title {
+    font-size: 70px;
+    line-height: 74px;
+  }
+  &__slider-text {
+    width: 500px;
+  }
+}
+}
+@media (max-width: 1200px) {
+  .top {
+    &__slider-title {
+      font-size: 62px;
+      line-height: 74px;
+    }
+    &__slider-text {
+      width: 500px;
+    }
+    &__slider-img {
+      height: 640px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+}
+@media (max-width: 992px) {
+  .footer {
+    &__info {
+      width: 380px;
+    }
+  }
+  .gallery {
+    &__items {
+      grid-gap: 10px;
+    }
+    &__btn {
+      margin: 0;
+      padding: 6px 10px;
+    }
+  }
+  .about {
+    &__text {
+      margin-left: 0;
+    }
+    &__content {
+      padding: 40px 0;
+    }
+  }
+  .inspiration {
+    &__images {
+      display: none;
+    }
+   }
+   .gallery {
+    &__items {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    &.gallery-page {
+      .gallery__item:nth-child(8) {
+        grid-column: 1;
+        grid-row: 1;
+      }
+    }
+    &__item:first-child {
+      grid-column: span 1;
+      grid-row: span 1;
+    }
+  }
+}
+@media (max-width: 840px) {
+  .top {
+    &__inner {
+      &::after {
+        height: 100%;
+      }
+    }
+    &__slider-title {
+      font-size: 44px;
+      line-height: 54px;
+    }
+    &__slider-img {
+      height: 400px;
+    }
+  }
+  .top__slider-text {
+      width: 400px;
+    }
+  .collection {
+    grid-template-columns: repeat(2, 1fr);
+    &__images {
+      width: 100%;
+    }
+  }
+  .works-path {
+    &__item {
+      width: 350px;
+    }
+    &__item--production {
+      margin-left: 50px;
+      }
+    }
+  }
+ 
 @media (max-width: 768px) {
   .header {
     &__btn {
-    display: none;
+      display: none;
     }
   }
-  .menu {
+  .menu{
     &__list-item {
-       padding-left: 0;
-      & + menu__list-item  {
-      padding-right: 0; 
+      padding-left: 0;
+       & + .menu__list-item{
+        padding-right: 0;
     }
+   }
   }
-}
   .logo {
     margin: 0;
   }
+  .gallery {
+    &__buttons {
+      display: grid;  
+    }
+    &__btn {
+      margin-bottom: 10px;
+    }
+  }
+  .footer {
+    &__inner {
+     flex-wrap: wrap;
+     justify-content: center;
+    }
+    &__info {
+      width: 100%;
+      margin-bottom: 50px;
+    }
+    &__info-text {
+      width: 100%;
+    }
+    &__menu {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &__social {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  .decor {
+    padding: 70px 0 55px;
+  }
+  .works-path {
+    &__item--measuring {
+      margin-left: 100px;
+    }
+  }
+  .about {
+    &__prev{
+     padding: 80px 0;
+  }
+  &__title {
+    width: auto;
+  }  
+ }
+ .partners {
+  &__items {
+    grid-template-columns: repeat(3, 1fr);
+    }
+  }
 }
-
+@media (max-width: 650px) {
+  .top {
+    &__inner {
+      padding-bottom: 25px;
+      padding-top: 30px;
+    }
+    &__slider-item {
+      .top__slider-img {
+        display: none;
+      }
+    }    
+    &__slider-text {
+      margin-bottom: 15px;
+    }
+  }
+  .works-path {    
+    &__items-box::after,
+    &__item--production::after,
+    &__item--measuring::after {
+      display: none;
+    }
+    &__items-box {
+      flex-wrap: wrap;
+      border: none;     
+    }
+    &__item--measuring {
+      margin-left: 0;
+      padding-top: 0;
+      padding-bottom: 38px;
+    }
+    &__item--production {
+      margin-left: 0;
+      order: 1;
+    }
+    &__item {
+      width: 100%;
+    }
+  }
+  .blog-box {
+    &__items {
+      display: block;
+    }
+    &__img-link {
+      display: block;
+    }
+    &__img {
+      width: 100%;
+    }
+    &__item {
+      margin-bottom: 20px;
+    }
+  }
+}
 @media (max-width: 540px) {
   .logo {
-    order: -1;
+    order: -1; 
+    position: relative;
+    z-index: 12;
   }
-  .header__btn-menu {
-
+  .header {
+    &__inner {
+      flex-wrap: wrap;
+      padding-top: 42px;
+    }
+    &__btn-menu {
+      display: block;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      order: -1;
+      position: relative;
+      z-index: 12;
+      span {
+        background-color: #000;
+        width: 35px;
+        height: 3px;
+        border-radius: 4px;
+        display: block;
+        margin: 6px 0;
+      }
+    }
+   }
+  .menu {
+    padding-right: 0;
+    width: 100%;
+    background-color: #fff;
+    position: relative;
+    z-index: 11;
+    text-align: center;
+    transform: translateY(-300px);
+    transition: all .5s;
+    &--open {
+      transform: translateY(30px);
+    }
+    &__list{      
+      display: block;
+    } 
+    &__list-item {
+      padding-right: 0;
+    }
+    &__list-link {
+      display: block;
+      padding: 15px 0;
+    }
+  }
+  .collection {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  %title-font{
+      font-size: 28px;
+      line-height: 36px;
+    }
+  .works-path {
+    &__item-title {
+    font-size: 16px;
+    line-height: 27px;
+    }
+  }
+  .gallery {
+    padding-top: 10px;
+    &__items {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    &__item:first-child {
+      grid-column: 1;
+      grid-row: 1;
+    }
+   }
+  .blog-box {
+    padding-bottom: 40px;
+    &__item-title {
+      font-size: 22px;
+      line-height: 36px;
+    }
+  }
+  .about {
+    &__prev-title {
+      font-size: 36;
+      line-height: 46px;
+    }
+  }
+  .inspiration {
+    &__item-text,
+    &__num {
+      font-size: 16px;
+      line-height: 23px;
+    }
+    &__item-text {
+      margin-right: 10px;
+    }
+  }
+  }
+@media (max-width: 375px) {
+  .footer {
+    &__inner {
+      justify-content: space-between;
+    }
+    &__social {
+      margin-left: 0;
+    }
+    &__form {
+      display: block;
+    }
+    &__form-button {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 10px;
+    }
+  }
+  .inspiration {
+    height: auto;
   }
 }

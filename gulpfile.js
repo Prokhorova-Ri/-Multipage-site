@@ -77,7 +77,7 @@ function build() {
 
 function watching() {
   watch(['docs/scss/**/*.scss'], styles);
-  watch(['docs/js/**/*.js', '!app/js/main.min.js'], scripts);
+  watch(['docs/js/**/*.js', 'docs/js/main.min.js'], scripts);
   watch(['docs/*.html']).on('change', browserSync.reload);
 }
 
@@ -94,4 +94,4 @@ exports.browsersync = browsersync;
 exports.cleanDist   = cleanDist;
 
 exports.build       = series(cleanDist, images, build)
-exports.default     = parallel(styles, scripts, browsersync, watching);
+exports.default     = parallel(styles, browsersync, watching);
