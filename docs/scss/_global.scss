@@ -7,10 +7,12 @@ body{
   font-weight: 400;
   line-height: 27px;
   color: $default;  
-  min-width: 300px;
+  min-width: 300px;  
 }
 
 .wrapper {
+  overflow-y: hidden;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   position: relative;
